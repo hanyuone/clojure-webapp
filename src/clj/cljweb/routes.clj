@@ -22,6 +22,6 @@
       (read-nth-line "resources/public/questions.txt" random-int)))
   (POST "/time" req
     (let [q-time (get (:params req) :q-time)]
-      (spit "resources/public/times.txt" q-time :append true))
-    (response {:msg "Time written!"}))
+      (spit "resources/public/times.txt" q-time :append true)
+      q-time))
   (resources "/"))
