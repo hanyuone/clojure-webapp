@@ -59,7 +59,6 @@
 
 ;; Checking answers
 (defn answer-handler [response]
-  (.log js/console response)
   (reset! current-time (.getTime (js/Date.)))
   (reset! counter 0)
   (random-problem))
