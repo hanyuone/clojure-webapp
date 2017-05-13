@@ -72,5 +72,6 @@
             (/ (- new-time @current-time) (* 1000 3600 24))]
         (POST "/time"
           {:params {:q-time millis-diff}
-           :handler answer-handler}))
+           :handler answer-handler
+           :format :json}))
       (println "Wrong answer!"))))
