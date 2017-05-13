@@ -73,5 +73,6 @@
         (POST "/time"
           {:params {:q-time millis-diff}
            :handler answer-handler
-           :format :json}))
+           :format :json
+           :response-format :json}))
       (println "Wrong answer!"))))
