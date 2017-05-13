@@ -37,7 +37,7 @@
           (first operators)
           (str
             (if
-              (and
+              (or
                 (= (count final-string) 1)
                 (brackets? prev-operator (first operators)))
               final-string
