@@ -16,7 +16,7 @@
         io/resource
         io/input-stream
         response
-        (assoc :headers {"Content-Type" "text/html; charset=utf-8"})))
+        (assoc :headers {"Content-Type" "text/json; charset=utf-8"})))
   (GET "/random" []
     (let [random-int (rand-int 2830)]
       (read-nth-line "resources/public/questions.txt" random-int)))
